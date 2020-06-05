@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'faker'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'semantic-ui-sass'
 
 group :development, :test do

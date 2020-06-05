@@ -1,2 +1,11 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Patients</h1>
+<%= link_to 'Add Patient', new_user_path %>
+<hr />
+<h2><%= @users.length <= 0 ? "No Patients" : "" %></h2> 
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.name, user %>
+    </li>
+  <% end %>
+</ul>
