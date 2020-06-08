@@ -28,7 +28,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'semantic-ui-sass'
-
+gem 'devise', '~> 4.7', '>= 4.7.1'
 group :development, :test do
   gem 'pry'
 end
