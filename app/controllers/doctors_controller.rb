@@ -16,7 +16,7 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.create(doctor_params)
 
     if  @doctor.save
-      redirect_to @doctor
+      redirect_to root_path
     else
       render :new
     end
