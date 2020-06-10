@@ -12,7 +12,7 @@ class AppointmentController < ApplicationController
   end
 
   def create
-    @appointment = @appointment.new(appointment_params)
+    @appointment = @doctor.appointments.(appointment_params)
 
     if @appointment.save
       redirect_to doctor_appointments_path(@doctor)
