@@ -3,14 +3,14 @@ class AppointmentController < ApplicationController
 
 
   def index
-    @appointments = @doctor.appointments
+    @appointments = Appointment
   end
 
 
   def new
+    @users = User.all - @doctor.users
     @appointments = Appointment.new
   end
-
   def create
     @appointment = @appointment.new(appointment_params)
 

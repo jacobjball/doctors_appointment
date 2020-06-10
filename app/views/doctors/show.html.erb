@@ -1,8 +1,8 @@
 <h1><%= @doctor.full_name %></h1>
 <hr />
 <br />
-<%= link_to 'Appointments', doctor_appointments_path(@doctor), class: "ui primary button inverted" %>
+<%= link_to 'Appointments', appointment_index_path, class: "ui primary button inverted" %>
 <br />
 <br />
 <br />
-<%= link_to 'Delete Doctor', @user, method: :delete, class: "ui red button inverted" %>
+<%= link_to 'Delete Doctor', @doctor, method: :delete, class: "ui red button inverted" %>

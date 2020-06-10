@@ -1,6 +1,9 @@
 <h1>Create Appointment</h1>
-<%= form_with(model: @appointment, local: true, class: "ui form" ) do |f| %>
+<%= form_with(model: [@doctor, @appointment], local: true, class: "ui form" ) do |f| %>
   <div class="field">
+    <%= f.label :user %>
+    <%= f.select :user_id, @users.collect { |u| [u.full_name, u.id] } %>
+    <br/>
     <%= f.label :purpose %>
     <%= f.text_field :purpose, required: true, placeholder: "Purpose" %>
      <%= f.label :date %>
