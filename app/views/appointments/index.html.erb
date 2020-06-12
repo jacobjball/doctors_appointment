@@ -1,4 +1,4 @@
-<h1><%= @doctor.full_name %>'s Appointments</h1>
+<h1>Dr. <%= @doctor.full_name.capitalize %>'s Appointments</h1>
 <%= link_to 'Add Appointment', new_doctor_appointment_path(@doctor) %>
 <hr/>
 
@@ -6,7 +6,7 @@
 <ul>
     <% @appointments.each do |appointment| %>
         <li>
-            <%= appointment.user.full_name %>
+            <%= appointment.user.full_name %> - <%= appointment.time %> - <%= appointment.date %> - <%= appointment.purpose %>
             <br/>
             <%= link_to 'Remove', doctor_appointments_path(@doctor, :id), method: :delete %>
         </li>
